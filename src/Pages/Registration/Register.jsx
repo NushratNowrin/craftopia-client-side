@@ -5,12 +5,20 @@ import { useContext } from "react";
 import "../Login/Login.css";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useTitle from "../../hooks/useTitle";
+import { useForm } from "react-hook-form"
 
 const Register = () => {
 	const [showError, setShowError] = useState("");
 	const [success, setSuccess] = useState("");
 	const [passwordType, setPasswordType] = useState("password");
+	const [passwordTypeConfirm, setPasswordTypeConfirm] = useState("password");
 	const [passwordInput, setPasswordInput] = useState("");
+	const [passwordInputConfirm, setPasswordInputConfirm] = useState("");
+
+    const {handleSubmit} = useForm();
+    const formSubmit = data => {
+        console.log(data)
+    }
 
 	const { user, createUser } = useContext(AuthContext);
 	useTitle("Register");
@@ -22,8 +30,18 @@ const Register = () => {
 		}
 		setPasswordType("password");
 	};
+	const togglePasswordConfirm = () => {
+		if (passwordTypeConfirm === "password") {
+			setPasswordTypeConfirm("text");
+			return;
+		}
+		setPasswordTypeConfirm("password");
+	};
 	const handlePasswordChange = (evnt) => {
 		setPasswordInput(evnt.target.value);
+	};
+	const handlePasswordChangeConfirm = (evnt) => {
+		setPasswordInputConfirm(evnt.target.value);
 	};
 	const getFormData = (event) => {
 		setSuccess("");
@@ -74,7 +92,7 @@ const Register = () => {
 		<div className='w-50 p-10 bg-slate-200 text-center'>
 			<div className='bg-slate-400 md:w-8/12 m-auto py-16 md:px-20 rounded mb-10'>
 				<h4 className='text-2xl font-bold mb-6 text-black'>Please Register</h4>
-				<form onSubmit={getFormData}>
+				<form onSubmit={handleSubmit(formSubmit)}>
 					<input
 						type='text'
 						name='name'
@@ -112,15 +130,38 @@ const Register = () => {
 							)}
 						</span>
 					</div>
+					<div className='flex items-center justify-center'>
+						<input
+							type={passwordTypeConfirm}
+							onChange={handlePasswordChangeConfirm}
+				
+							name='confirm-password'
+							id='confirm-password'
+							placeholder='Re-type Password'
+							required
+							className='py-1 w-3/5 md:w-2/6 px-3 rounded-l my-2'
+						/>
+						<span onClick={togglePasswordConfirm}>
+							{passwordTypeConfirm === "password" ? (
+								<AiFillEye className='eyeIcon bg-white' />
+							) : (
+								<AiFillEyeInvisible className='eyeIcon bg-white' />
+							)}
+						</span>
+					</div>
 
-                    <div className="my-3">
-                    <input type='radio' name='gender' id='male' value='male' />
-					<label htmlFor='male' className="mr-5">Male</label>
-					<input type='radio' name='gender' id='female' value='female' />
-					<label htmlFor='female'  className="mr-5">Female</label>
-					<input type='radio' name='gender' id='others' value='others' />
-					<label htmlFor='others'>Others</label>
-                    </div>
+					<div className='my-3'>
+						<input type='radio' name='gender' id='male' value='male' />
+						<label htmlFor='male' className='mr-5'>
+							Male
+						</label>
+						<input type='radio' name='gender' id='female' value='female' />
+						<label htmlFor='female' className='mr-5'>
+							Female
+						</label>
+						<input type='radio' name='gender' id='others' value='others' />
+						<label htmlFor='others'>Others</label>
+					</div>
 
 					<input
 						type='text'

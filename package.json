@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.1",
     "firebase": "^9.22.2",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
@@ -19,7 +20,8 @@
     "react-hook-form": "^7.44.3",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.13.0",
-    "sort-by": "^0.0.2"
+    "sort-by": "^0.0.2",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
