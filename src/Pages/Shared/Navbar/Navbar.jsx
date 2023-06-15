@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiDotsVertical, HiX } from 'react-icons/hi';
-import ActiveLink from "./ActiveLink";
+import ActiveLink from "../Activelink/ActiveLink";
 import logo from "../../../assets/logo.png"
 import { AuthContext } from "../../../Providers/AuthProvider";
 
@@ -79,13 +79,13 @@ const Navbar = () => {
 							<div className=' h-10 '>
 								<button
 									onClick={handleLogOut}
-									className=' bg-pink-500 text-white px-5 py-2 font-bold rounded-md hover:bg-pink-700'>
+									className=' bg-red-500 text-white px-5 py-2 font-bold rounded-md hover:bg-red-700'>
 									Logout
 								</button>
 							</div>
 						</div>
 					) : (
-						<button className=' bg-pink-500 text-white px-5 py-2 font-bold rounded-md hover:bg-pink-700'>
+						<button className=' bg-red-500 text-white px-5 py-2 font-bold rounded-md hover:bg-red-700'>
 							<ActiveLink to='/login'>Login</ActiveLink>
 						</button>
 					)}
