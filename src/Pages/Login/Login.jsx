@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Swal from 'sweetalert2'
 
 import {
 	Link,
@@ -9,8 +10,7 @@ import {
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import './Login.css';
 import { useContext } from "react";
-
-
+import { useForm } from "react-hook-form";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import useTitle from "../../hooks/useTitle"; 
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -29,6 +29,35 @@ const Login = () => {
 	useTitle('Login');
 	const from = location.state?.from?.pathname || "/";
 
+    const {
+		handleSubmit,
+		register,
+		formState: { errors },
+	} = useForm({});
+    const formSubmit = (data) => {
+        setSuccess("");
+		setShowError("")
+        login(data.email, data.password)
+			.then((userCredential) => {
+				// Signed in
+				const loggeduser = userCredential.user;
+				console.log(loggeduser);
+				setShowError("");
+                Swal.fire({
+                    position: 'center-center',
+                    icon: 'success',
+                    title: 'User Login Successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+				// navigate
+				navigate(from, { replace: true });
+			})
+			.catch((error) => {
+				const errorMessage = error.message;
+				setShowError(errorMessage);
+			});
+}
 
 	const auth = getAuth(app);
 
@@ -43,28 +72,6 @@ const Login = () => {
 		setPasswordType("password");
 	};
 
-	const getLoginData = (event) => {
-		event.preventDefault();
-		setSuccess("");
-		setShowError("");
-		const email = event.target.email.value;
-		const password = event.target.password.value;
-
-		login(email, password)
-			.then((userCredential) => {
-				// Signed in
-				const loggeduser = userCredential.user;
-				console.log(loggeduser);
-				setShowError("");
-				event.target.reset();
-				// navigate
-				navigate(from, { replace: true });
-			})
-			.catch((error) => {
-				const errorMessage = error.message;
-				setShowError(errorMessage);
-			});
-	};
 	const forgetPassword = (event) => {
 		const email = emailRef.current.value;
 		if (!email) {
@@ -96,10 +103,10 @@ const Login = () => {
 	};
 
 	return (
-		<div className='w-50 p-10 bg-slate-200 text-center'>
-			<div className='email-pass bg-slate-400 md:w-80 m-auto p-16 rounded-md mb-10'>
+		<div className='w-50 p-10 text-center'>
+			<div className='email-pass bg-slate-200 md:w-80 m-auto p-16 rounded-md mb-10'>
 				<h4 className='text-2xl font-bold mb-6 text-black'>Please Login</h4>
-				<form onSubmit={getLoginData} className='login "text-white'>
+				<form onSubmit={handleSubmit(formSubmit)} className='login "text-white'>
 					<input
 						className='py-1 px-3 w-full rounded my-2'
 						type='email'
@@ -108,6 +115,7 @@ const Login = () => {
 						placeholder='Enter Email Address'
 						ref={emailRef}
 						required
+                        {...register("email")}
 					/>
 					<br />
 					<div className='flex items-center justify-center'>
@@ -115,11 +123,12 @@ const Login = () => {
 							className='py-1 px-3 w-full rounded-l my-2'
 							type={passwordType}
 							onChange={handlePasswordChange}
-							value={passwordInput}
+							
 							name='password'
 							id='password'
 							placeholder='Enter Password'
 							required
+                            {...register("password")}
 						/>
 						<span onClick={togglePassword}>
 							{passwordType === "password" ? (
@@ -154,7 +163,7 @@ const Login = () => {
 			<div className='text-xl font-bold '>Or</div>
 			<div>
 				<button
-					className='px-12 py-4 bg-slate-400 rounded-md text-black font-semibold hover:text-green-700 my-2'
+					className='px-12 py-4 bg-slate-200 rounded-md text-black font-semibold hover:bg-slate-400 hover:text-red-700 my-2'
 					onClick={loginWithGoogle}>
 					Sign in with Google
 				</button>
