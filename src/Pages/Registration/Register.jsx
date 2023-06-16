@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Swal from 'sweetalert2'
-import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useContext } from "react";
 import "../Login/Login.css";
@@ -12,9 +12,21 @@ import * as yup from "yup";
 const schema = yup.object({
 	name: yup.string().required(),
 	email: yup.string().required().email("Please use a valid email"),
-    password: yup.string().min(6).required().matches(/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).+$/, "need at least one uppercase and special character"),
-    confirm_password: yup.string().oneOf([yup.ref("password")],"Password must be matched").required(),
-	number: yup.string().matches(/^(?:\+88|88)?(01[3-9]\d{8})$/, "Please use a valid phone number"),
+	password: yup
+		.string()
+		.min(6)
+		.required()
+		.matches(
+			/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).+$/,
+			"need at least one uppercase and special character"
+		),
+	confirm_password: yup
+		.string()
+		.oneOf([yup.ref("password")], "Password must be matched")
+		.required(),
+	number: yup
+		.string()
+		.matches(/^(?:\+88|88)?(01[3-9]\d{8})$/, "Please use a valid phone number"),
 });
 
 const Register = () => {
@@ -24,39 +36,47 @@ const Register = () => {
 	const [passwordTypeConfirm, setPasswordTypeConfirm] = useState("password");
 	const [passwordInput, setPasswordInput] = useState("");
 	const [passwordInputConfirm, setPasswordInputConfirm] = useState("");
-    const { user, createUser } = useContext(AuthContext);
-    useTitle("Register");
+	const { createUser, updateUserProfile } = useContext(AuthContext);
+	useTitle("Register");
+    const navigate = useNavigate()
 	const {
 		handleSubmit,
 		register,
+		reset,
 		formState: { errors },
 	} = useForm({
 		resolver: yupResolver(schema),
 	});
 	const formSubmit = (data) => {
-        setSuccess("");
+		setSuccess("");
 		setShowError("");
 		console.log(data);
-        createUser(data.email, data.password)
-        
-        .then((result) => {
-            const loggeduser = result.user;
-            console.log(loggeduser);
-            setShowError("");
-            Swal.fire({
-                position: 'center-center',
-                icon: 'success',
-                title: 'User has been created Successfully',
-                showConfirmButton: false,
-                timer: 1500
-              });
-    
-        })
-        .catch((error) => {
-            const errorMessage = error.message;
-            console.log(errorMessage);
-            setShowError(errorMessage);
-        });
+		createUser(data.email, data.password)
+			.then((result) => {
+				const loggeduser = result.user;
+				console.log(loggeduser);
+				updateUserProfile(data.name, data.photoURL)
+					.then(() => {
+						console.log("user profile info updated");
+                        reset();
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: "User has been created Successfully",
+                            showConfirmButton: false,
+                            timer: 1500,
+                        });
+                        navigate("/")
+					})
+					.catch((error) => console.log(errors));
+				setShowError("");
+				
+			})
+			.catch((error) => {
+				const errorMessage = error.message;
+				console.log(errorMessage);
+				setShowError(errorMessage);
+			});
 	};
 
 	const togglePassword = () => {
@@ -121,7 +141,7 @@ const Register = () => {
 							)}
 						</span>
 					</div>
-                    <p className='text-red-600 text-sm'>{errors.password?.message}</p>
+					<p className='text-red-600 text-sm'>{errors.password?.message}</p>
 					<div className='flex items-center justify-center'>
 						<input
 							type={passwordTypeConfirm}
@@ -140,7 +160,9 @@ const Register = () => {
 							)}
 						</span>
 					</div>
-                    <p className='text-red-600 text-sm'>{errors.confirm_password?.message}</p>
+					<p className='text-red-600 text-sm'>
+						{errors.confirm_password?.message}
+					</p>
 
 					<div className='my-3'>
 						<input

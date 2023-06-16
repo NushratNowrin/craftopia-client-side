@@ -28,7 +28,6 @@ const Login = () => {
 	const { login, signInWithGoogle } = useContext(AuthContext);
 	useTitle('Login');
 	const from = location.state?.from?.pathname || "/";
-
     const {
 		handleSubmit,
 		register,
@@ -44,7 +43,7 @@ const Login = () => {
 				console.log(loggeduser);
 				setShowError("");
                 Swal.fire({
-                    position: 'center-center',
+                    position: 'center',
                     icon: 'success',
                     title: 'User Login Successfully',
                     showConfirmButton: false,
