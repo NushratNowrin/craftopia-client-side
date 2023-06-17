@@ -38,7 +38,7 @@ const Dashboard = () => {
 						<Link to='/'>Home</Link>
 					</li>
 					<li className='mx-5 font-semibold'>
-						<Link to='/instructor'>Instructor</Link>
+						<Link to='/instructor'>Instructors</Link>
 					</li>
 					<li className='mx-5 font-semibold'>
 						<Link to='/classes'>Classes</Link>
