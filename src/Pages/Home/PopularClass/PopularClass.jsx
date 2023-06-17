@@ -9,7 +9,7 @@ const PopularClass = () => {
 			.then((data) => setClasses(data));
 	}, []);
 	const sixClasses = classes.slice(0, 6);
-	console.log(sixClasses);
+
 	return (
 		<div className='my-10'>
 			<Heading heading={"Popular Classes"}></Heading>

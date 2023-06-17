@@ -1,23 +1,20 @@
-import { useEffect, useState } from "react";
-import React from "react";
-import "./Instructor.css";
-import useTitle from "../../hooks/useTitle";
+import React, { useEffect, useState } from 'react';
+import Heading from '../../../components/Heading/Heading';
 
-const Instructor = () => {
-	const [instructors, setInstructors] = useState([]);
+const PopularInstructors = () => {
+    const [instructors, setInstructors] = useState([]);
 	useEffect(() => {
 		fetch("https://craftopia-server-side.vercel.app/instructors")
 			.then((res) => res.json())
 			.then((data) => setInstructors(data));
 	}, []);
-	useTitle("Instructor");
-	return (
-		<div className='bg-slate-200'>
-			<h1 className='bg-slate-700 text-center text-3xl font-semibold font-serif  p-5 text-white tracking-wider'>
-				Instructors
-			</h1>
-			<div className='grid grid-cols-3 justify-center items-center gap-10 md:p-16'>
-				{instructors.map((instructor) => (
+    const sixInstructors = instructors.slice(0, 6);
+    return (
+        <div className='my-10'>
+			<Heading heading={"Popular Instructos"}></Heading>
+
+            <div className='grid grid-cols-3 justify-center items-center gap-10 md:p-16'>
+				{sixInstructors.map((instructor) => (
 					<div
 						className='image-div relative flex items-center justify-center'
 						key={instructor._id}>
@@ -33,8 +30,9 @@ const Instructor = () => {
 					</div>
 				))}
 			</div>
-		</div>
-	);
+            
+        </div>
+    );
 };
 
-export default Instructor;
+export default PopularInstructors;
