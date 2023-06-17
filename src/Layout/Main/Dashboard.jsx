@@ -28,6 +28,9 @@ const Dashboard = () => {
 					<li className='mx-5 font-semibold '>
 						<Link to='my-enrolled-class'>My Enrolled Class</Link>
 					</li>
+					<li className='mx-5 font-semibold '>
+						<Link to='my-enrolled-class'>Payment History</Link>
+					</li>
 
 					<div className='divider'></div>
 
