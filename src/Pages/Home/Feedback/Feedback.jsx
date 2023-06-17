@@ -10,6 +10,7 @@ import { Navigation } from "swiper";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { Rating, RoundedStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import Heading from "../../../components/Heading/Heading";
 
 const Feedback = () => {
 	const [reviews, setReviews] = useState([]);
@@ -24,10 +25,8 @@ const Feedback = () => {
 		inactiveFillColor: "#A1A1A1",
 	};
 	return (
-		<div className='md:m-16 mb-16'>
-			<div className='text-2xl font-semibold text-center mt-5'>
-				Our Clients Feedback
-			</div>
+		<div className='md:mx-16 mb-16'>
+			<Heading heading={"Client's Feedback"}></Heading>
 
 			<Swiper navigation={true} modules={[Navigation]} className='mySwiper '>
 				{reviews.map((review) => (

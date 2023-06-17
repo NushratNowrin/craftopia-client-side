@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import "./Instructor.css";
+import useTitle from "../../hooks/useTitle";
 
 const Instructor = () => {
 	const [instructors, setInstructors] = useState([]);
@@ -9,6 +10,7 @@ const Instructor = () => {
 			.then((res) => res.json())
 			.then((data) => setInstructors(data));
 	}, []);
+	useTitle('Instructor')
 	return (
 		<div className="bg-slate-200">
             <h1 className="bg-slate-700 text-center text-3xl font-semibold font-serif  p-5 text-white tracking-wider">Instructors</h1>

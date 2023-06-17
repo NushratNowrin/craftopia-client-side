@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useTitle from "../../hooks/useTitle";
 
 const Classes = () => {
 	const [classes, setClasses] = useState([]);
@@ -7,6 +8,7 @@ const Classes = () => {
 			.then((res) => res.json())
 			.then((data) => setClasses(data));
 	}, []);
+    useTitle('Classes')
 	return (
 		<div className='bg-slate-100'>
 			<h1 className='bg-slate-700 text-center text-3xl font-semibold font-serif  p-5 text-white tracking-wider'>
