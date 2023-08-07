@@ -13,7 +13,7 @@ const PopularInstructors = () => {
         <div className='my-10'>
 			<Heading heading={"Popular Instructos"}></Heading>
 
-            <div className='grid grid-cols-3 justify-center items-center gap-10 md:p-16'>
+            <div className='grid frid-cols-1 md:grid-cols-3 justify-center items-center gap-10 p-10 md:p-16'>
 				{sixInstructors.map((instructor) => (
 					<div
 						className='image-div relative flex items-center justify-center'
