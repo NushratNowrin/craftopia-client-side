@@ -11,7 +11,7 @@ const SingleClass = ({ classs }) => {
 	const handleSelectClass = (classs) => {
 		console.log(classs);
 		if (user) {
-			fetch("http://localhost:5000/selectedClasses")
+			fetch("https://craftopia-server-side.vercel.app/selectedClasses")
 				.then(res => res.json())
 				.then(data => {
 					if (data.insertedID) {
