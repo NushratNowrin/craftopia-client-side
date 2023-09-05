@@ -26,6 +26,7 @@ const Feedback = () => {
 	};
 	return (
 		<div className='md:mx-16 mb-16'>
+			<h2 className="subheading">See what others students share about us</h2>
 			<Heading heading={"Client's Feedback"}></Heading>
 
 			<Swiper navigation={true} modules={[Navigation]} className='mySwiper '>

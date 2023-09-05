@@ -12,6 +12,7 @@ const PopularInstructors = () => {
     const sixInstructors = instructors.slice(0, 6);
     return (
         <div className='my-10'>
+			<h2 className="subheading">Our most popular instructors</h2>
 			<Heading heading={"Popular Instructos"}></Heading>
 
             <div className='grid frid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-10 p-10 md:p-16'>
