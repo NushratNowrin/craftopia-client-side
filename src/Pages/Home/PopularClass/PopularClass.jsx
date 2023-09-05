@@ -13,7 +13,8 @@ const PopularClass = () => {
 
 	return (
 		<div className='my-10'>
-			<Heading heading={"Popular Courses"}></Heading>
+			<h2 className="subheading">Student&apos;s most favourite courses are here</h2>
+			<Heading heading={"Trending Courses"}></Heading>
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-10 p-10 md:p-16'>
 				{sixClasses.map((classs) => (

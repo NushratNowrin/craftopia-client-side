@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.subheading{
+    text-align: center;
+    font-style: italic;
+    color: #2563EB;
+    letter-spacing: 1px;
+}
 .shadow-button{
     transition: 0.2s ease-in-out;
 }
