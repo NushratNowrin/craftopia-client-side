@@ -20,14 +20,19 @@ const Instructor = () => {
 		return <Spinner></Spinner>;
 	}
 	return (
-		<div className='bg-slate-200'>
-			<h1 className='bg-slate-700 text-center text-3xl font-semibold font-serif  p-5 text-white tracking-wider'>
-				Instructors
-			</h1>
+		<div className='bg-slate-200 pt-24'>
+			<div className="bg-slate-700  text-center bg-opacity-70  p-5">
+				<h1 className=' text-3xl font-semibold font-serif  text-white tracking-wider mb-2'>
+					Instructors
+				</h1>
+				<p className="text-slate-200">Meet our qualityful instructors here</p>
+			</div>
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-10 instructor md:p-16 p-10'>
 				{instructors.map((instructor) => (
-					<SingleInstructor key={instructor._id} {...instructor}></SingleInstructor>
+					<SingleInstructor
+						key={instructor._id}
+						{...instructor}></SingleInstructor>
 				))}
 			</div>
 		</div>

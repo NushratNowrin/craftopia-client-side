@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.shadow-button{
+    transition: 0.2s ease-in-out;
+}
+.shadow-button:hover{
+    box-shadow: 0 0 0.5rem white;
+}
+
+
+/* #2563EB */
