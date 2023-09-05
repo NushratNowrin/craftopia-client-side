@@ -6,6 +6,9 @@ const Faq = () => {
 	const [isOpen2, setIsOpen2] = useState(false);
 	const [isOpen3, setIsOpen3] = useState(false);
 	const [isOpen4, setIsOpen4] = useState(false);
+	const [isOpen5, setIsOpen5] = useState(false);
+	const [isOpen6, setIsOpen6] = useState(false);
+
 	const toggleAccordion1 = () => {
 		setIsOpen1(!isOpen1);
 	};
@@ -18,6 +21,13 @@ const Faq = () => {
 	const toggleAccordion4 = () => {
 		setIsOpen4(!isOpen4);
 	};
+	const toggleAccordion5 = () => {
+		setIsOpen5(!isOpen5);
+	};
+	const toggleAccordion6 = () => {
+		setIsOpen6(!isOpen6);
+	};
+
 	return (
 		<div className='faq  p-5'>
 			<div className='sm:px-20 px-10'>
@@ -32,16 +42,13 @@ const Faq = () => {
 					<div
 						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
 						onClick={toggleAccordion1}>
-						<h3>What is Princess Palette?</h3>
+						<h3>What age groups do you cater to?</h3>
 						<span>{isOpen1 ? "-" : "+"}</span>
 					</div>
 					{isOpen1 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
 							<p>
-								Princess Palette is an online platform dedicated to offering a
-								wide range of makeup toys and related products for kids. We
-								provide a safe and fun way for children to explore the world of
-								cosmetics through play.
+							We provide classes for children, teenagers, and adults. Our programs are designed to accommodate different age groups and skill levels.
 							</p>
 						</div>
 					)}
@@ -51,16 +58,13 @@ const Faq = () => {
 					<div
 						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
 						onClick={toggleAccordion2}>
-						<h3>Are the makeup toys safe for children?</h3>
+						<h3>What is the duration of your courses?</h3>
 						<span>{isOpen2 ? "-" : "+"}</span>
 					</div>
 					{isOpen2 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
 							<p>
-								Yes, all the makeup toys listed on our marketplace are
-								rigorously tested for safety and comply with industry standards.
-								We prioritize the well-being of children and ensure that our
-								products are non-toxic and suitable for kids.
+							Course durations vary depending on the program. Some are short-term, running for a few weeks, while others are long-term, spanning several months.
 							</p>
 						</div>
 					)}
@@ -69,15 +73,13 @@ const Faq = () => {
 					<div
 						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
 						onClick={toggleAccordion3}>
-						<h3>What age range are these makeup toys suitable for?</h3>
+						<h3>What qualifications do your instructors have?</h3>
 						<span>{isOpen3 ? "-" : "+"}</span>
 					</div>
 					{isOpen3 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
 							<p>
-								Our makeup toys are generally designed for children aged 3 and
-								above. However, please check the specific product descriptions
-								for age recommendations as they may vary.
+							Our instructors are experienced artists and educators with degrees in fine arts or related fields. They bring a wealth of knowledge and expertise to our classes.
 							</p>
 						</div>
 					)}
@@ -87,17 +89,48 @@ const Faq = () => {
 						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
 						onClick={toggleAccordion4}>
 						<h3>
-							Can I return or exchange a product if I&apos;m not satisfied?
+						Are there any prerequisites for specific classes?
 						</h3>
 						<span>{isOpen4 ? "-" : "+"}</span>
 					</div>
 					{isOpen4 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
 							<p>
-								Yes, we have a hassle-free return and exchange policy. If
-								you&apos;re not satisfied with your purchase, please contact our
-								customer support team within 30 days of receiving your order,
-								and they will guide you through the process.
+							Prerequisites vary depending on the class. Some advanced courses may require prior experience or completion of a prerequisite course. We outline these requirements in our course descriptions.
+							</p>
+						</div>
+					)}
+				</div>
+				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
+					<div
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						onClick={toggleAccordion5}>
+						<h3>
+						Do you offer any discounts or scholarships?
+						</h3>
+						<span>{isOpen5 ? "-" : "+"}</span>
+					</div>
+					{isOpen5 && (
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+							<p>
+							Yes, we offer discounts for early registration, sibling enrollment, and occasional scholarship opportunities for deserving students. Please inquire for current discount and scholarship availability.
+							</p>
+						</div>
+					)}
+				</div>
+				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
+					<div
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						onClick={toggleAccordion6}>
+						<h3>
+						Are there opportunities for students to showcase their work in exhibitions or events?
+						</h3>
+						<span>{isOpen6 ? "-" : "+"}</span>
+					</div>
+					{isOpen6 && (
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+							<p>
+							Yes, we regularly organize exhibitions and events to showcase our students&apos; work. It&apos;s a great way to celebrate their creativity and talent.
 							</p>
 						</div>
 					)}
