@@ -15,7 +15,7 @@ const PopularClass = () => {
 		<div className='my-10'>
 			<Heading heading={"Popular Classes"}></Heading>
 
-			<div className='grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-10 p-10 md:p-16'>
+			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-10 p-10 md:p-16'>
 				{sixClasses.map((classs) => (
 					<SingleClass key={classs._id} classs = {classs}></SingleClass>
 				))}

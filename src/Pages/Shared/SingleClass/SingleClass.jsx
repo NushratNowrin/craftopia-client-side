@@ -66,8 +66,8 @@ const SingleClass = ({ classs }) => {
 				classs.seats == 0 ? "bg-red-300" : "bg-slate-300"
 			}  relative rounded-3xl hover:text-white`}>
 			<div className=' h-60  flex-col items-center justify-center'>
-				<img className='rounded-t-3xl shadow-lg' src={image} />
-				<span className='absolute top-2 right-2 border border-white z-50 bg-red-600 text-white font-semibold text-sm px-3 py-1.5 rounded-3xl'>
+				<img className='h-full object-cover w-full rounded-t-3xl shadow-lg' src={image} />
+				<span className='absolute top-2 right-2 border border-white z-40 bg-red-600 text-white font-semibold text-sm px-3 py-1.5 rounded-3xl'>
 					Student : {students}
 				</span>
 				<div className='absolute top-0 bottom-0 left-0 right-0 bg-black bg-opacity-0 rounded-3xl z-20 hover:bg-opacity-60 opacity-100 transition-opacity'></div>
