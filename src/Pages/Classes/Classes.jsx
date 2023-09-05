@@ -14,7 +14,7 @@ const Classes = () => {
 	return (
 		<div className='bg-slate-100'>
 			<h1 className='bg-slate-700 text-center text-3xl font-semibold font-serif  p-5 text-white tracking-wider'>
-				Classes
+				Courses
 			</h1>
 			<div className='grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-10 p-5 md:p-16'>
 				{classes.map((classs) => (

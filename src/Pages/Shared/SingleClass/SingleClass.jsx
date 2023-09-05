@@ -38,7 +38,7 @@ const SingleClass = ({ classs }) => {
 				.then((data) => {
 					if (data.insertedId) {
 						Swal.fire({
-							title: "Class is selected successfully",
+							title: "Course is selected successfully",
 							icon: "success",
 							confirmButtonText: false,
 							timer: 1500,
@@ -88,13 +88,13 @@ const SingleClass = ({ classs }) => {
 						<div
 							className='bg-slate-500 opacity-50 text-white uppercase text-sm px-5 py-2 border rounded-xl disabled'
 							>
-							Select class
+							Select course
 						</div>
 					) : (
 						<button
 							onClick={() => handleSelectClass(classs)}
 							className='uppercase text-sm px-5 py-2 border border-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white rounded-xl shadow-button'>
-							Select class
+							Select course
 						</button>
 					)}
 				</div>

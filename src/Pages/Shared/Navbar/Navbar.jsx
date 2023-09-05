@@ -44,10 +44,10 @@ const Navbar = () => {
 						<ActiveLink to='/'>Home</ActiveLink>
 					</li>
 					<li className='mx-5 font-semibold'>
-						<ActiveLink to='/instructor'>Instructor</ActiveLink>
+						<ActiveLink to='/instructor'>Instructors</ActiveLink>
 					</li>
 					<li className='mx-5 font-semibold'>
-						<ActiveLink to='/classes'>Classes</ActiveLink>
+						<ActiveLink to='/classes'>Courses</ActiveLink>
 					</li>
 					
                     {
