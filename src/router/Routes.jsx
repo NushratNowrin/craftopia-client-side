@@ -10,6 +10,8 @@ import Dashboard from "../Layout/Main/Dashboard";
 import MyClasses from "../Pages/Dashboard/MyClasses/MyClasses";
 import MySelectedClass from "../Pages/Dashboard/MySelectedClass/MySelectedClass";
 import MyEnrolledClass from "../Pages/Dashboard/MyEnrolledClass/MyEnrolledClass";
+import DashboardIntro from "../Pages/Dashboard/DashboardIntro";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 
 
 export const router = createBrowserRouter([
@@ -29,10 +31,6 @@ export const router = createBrowserRouter([
 				path: "/classes",
 				element: <Classes></Classes>,
 			},
-			// {
-			// 	path: "/dashboards",
-			// 	element: <Dashboards></Dashboards>,
-			// }
 		],
 	},
 	{
@@ -56,12 +54,20 @@ export const router = createBrowserRouter([
 				element: <MyClasses></MyClasses>
 			},
 			{
+				path: "dashboard-intro",
+				element: <DashboardIntro></DashboardIntro>
+			},
+			{
 				path: "my-selected-class",
-				element: <MySelectedClass></MySelectedClass>
+				element: <MySelectedClass></MySelectedClass>,
 			},
 			{
 				path: "my-enrolled-class",
 				element: <MyEnrolledClass></MyEnrolledClass>
+			},
+			{
+				path: "payment-history",
+				element: <PaymentHistory></PaymentHistory>
 			}
 		]
 	}

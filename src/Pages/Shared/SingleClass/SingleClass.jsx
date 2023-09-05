@@ -2,31 +2,50 @@ import React from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const SingleClass = ({ classs }) => {
-	const { image, name, instructor, seats, price, students } = classs;
+	const { image, name, instructor, seats, price, students, _id } = classs;
+	const [selcted, setSelcted] = useState(false);
 	const { user } = useContext(AuthContext);
 	const navigate = useNavigate();
+	const location = useLocation();
+
 	const handleSelectClass = (classs) => {
 		console.log(classs);
-		if (user) {
-			fetch("https://craftopia-server-side.vercel.app/selectedClasses")
-				.then(res => res.json())
-				.then(data => {
-					if (data.insertedID) {
+		if (user && user.email) {
+			const classItem = {
+				selectedClassID: _id,
+				image,
+				name,
+				instructor,
+				seats,
+				price,
+				students,
+				email: user.email,
+			};
+
+			fetch("https://craftopia-server-side.vercel.app/selectedClasses", {
+				method: "POST",
+				headers: {
+					"content-type": "application/json",
+				},
+				body: JSON.stringify(classItem),
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					if (data.insertedId) {
 						Swal.fire({
-							position: "top-end",
+							title: "Class is selected successfully",
 							icon: "success",
-							title: "Your work has been saved",
-							showConfirmButton: false,
+							confirmButtonText: false,
 							timer: 1500,
 						});
 					}
 				});
 		} else {
 			Swal.fire({
-				position: "middle",
 				title: "Please Login First!",
 				icon: "warning",
 				showCancelButton: true,
@@ -35,10 +54,11 @@ const SingleClass = ({ classs }) => {
 				confirmButtonText: "Login Now!",
 			}).then((result) => {
 				if (result.isConfirmed) {
-					navigate("/login");
+					navigate("/login", { state: { from: location } });
 				}
 			});
 		}
+		setSelcted(true)
 	};
 	return (
 		<div
@@ -62,10 +82,10 @@ const SingleClass = ({ classs }) => {
 				</p>
 				<div className='flex justify-between py-2 mx-5 items-center'>
 					<p>BDT {price}</p>
-					{classs.seats == 0 ? (
+					{(classs.seats == 0 || selcted)  ? (
 						<div
 							className='bg-slate-500 opacity-50 text-white uppercase text-sm px-5 py-2 border rounded-xl disabled'
-							title='Sorry!!All seats are already booked'>
+							>
 							Select class
 						</div>
 					) : (

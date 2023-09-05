@@ -19,7 +19,7 @@ const Navbar = () => {
 			});
 	};
     return (
-		<div className='flex bg-gray-950 items-center md:px-20 px-5 text-white justify-between'>
+		<div className='flex bg-gray-950 items-center md:px-20 py-6 px-5 text-white justify-between fixed w-full z-50'>
 			<h3 className='text-sm'>
 				<Link to='/'><img src={logo} className="w-32" alt="" /></Link>
 			</h3>
@@ -63,7 +63,7 @@ const Navbar = () => {
 						<div className='flex justify-between items-center'>
 							{(user.photoURL != null)? (
 								<img
-									className='h-10 w-10 mr-3 rounded-full'
+									className='h-10 w-10 mr-3 rounded-full border'
 									src={user.photoURL}
 									title={user.displayName}
 									alt=''
