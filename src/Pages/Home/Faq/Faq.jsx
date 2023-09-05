@@ -19,8 +19,8 @@ const Faq = () => {
 		setIsOpen4(!isOpen4);
 	};
 	return (
-		<div className='faq lg:px-40 lg:py-20 sm:px-20 sm:py-10 p-5'>
-			<div className='sm:p-20 p-10'>
+		<div className='faq  p-5'>
+			<div className='sm:px-20 px-10'>
 				<div className="mb-16">
 					<h2 className='subheading'>
 						Have you Any Question? That can be related with our previous
