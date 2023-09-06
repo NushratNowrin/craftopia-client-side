@@ -40,7 +40,7 @@ const Faq = () => {
 				</div>
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion1}>
 						<h3>What age groups do you cater to?</h3>
 						<span>{isOpen1 ? "-" : "+"}</span>
@@ -56,7 +56,7 @@ const Faq = () => {
 
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion2}>
 						<h3>What is the duration of your courses?</h3>
 						<span>{isOpen2 ? "-" : "+"}</span>
@@ -71,7 +71,7 @@ const Faq = () => {
 				</div>
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion3}>
 						<h3>What qualifications do your instructors have?</h3>
 						<span>{isOpen3 ? "-" : "+"}</span>
@@ -86,7 +86,7 @@ const Faq = () => {
 				</div>
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion4}>
 						<h3>
 						Are there any prerequisites for specific classes?
@@ -103,7 +103,7 @@ const Faq = () => {
 				</div>
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion5}>
 						<h3>
 						Do you offer any discounts or scholarships?
@@ -120,7 +120,7 @@ const Faq = () => {
 				</div>
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 text-white py-3 px-8'
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion6}>
 						<h3>
 						Are there opportunities for students to showcase their work in exhibitions or events?

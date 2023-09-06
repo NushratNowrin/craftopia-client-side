@@ -1,4 +1,5 @@
 import Banner from "./Banner/Banner";
+import Contact from "./Contact/Contact";
 import Faq from "./Faq/Faq";
 import Feedback from "./Feedback/Feedback";
 import PopularClass from "./PopularClass/PopularClass";
@@ -13,6 +14,7 @@ const Home = () => {
             <PopularInstructors></PopularInstructors>
             <Feedback></Feedback>
             <Faq></Faq>
+            <Contact></Contact>
         </div>
     );
 };
