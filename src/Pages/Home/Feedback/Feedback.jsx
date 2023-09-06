@@ -51,10 +51,10 @@ const Feedback = () => {
 							<div className='text-4xl translate-y-16 text-amber-600'>
 								<FaQuoteLeft></FaQuoteLeft>
 							</div>
-							<div>
+							<div className="">
 								<img
 									src={review.image}
-									className='w-40 h-40 rounded-full  border-black border-4'
+									className='h-40 object-cover w-40 rounded-full  border-black border-4'
 									alt=''
 								/>
 							</div>
