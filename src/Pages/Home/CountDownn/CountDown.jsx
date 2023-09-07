@@ -45,14 +45,14 @@ const CountDown = () => {
         return() => {
             clearInterval(clean)
         }
-    },[])
+    });
 
 	return (
 		<section className='my-20'>
-			<div className='flex sm:flex-row flex-col items-center justify-center mb-10'>
-				<img src={Offer} alt='' className='w-60' />
+			<div className='flex  items-center justify-center mb-10'>
+				<img src={Offer} alt='' className='sm:w-52 w-40'/>
 
-				<img src={fifty} alt='' className='w-32' />
+				<img src={fifty} alt='' className='sm:w-28 w-20' />
 			</div>
 
 			<div className=''>

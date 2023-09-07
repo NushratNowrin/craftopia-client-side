@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
 }
 .counter{
     font-size: 30px;
