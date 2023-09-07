@@ -15,9 +15,13 @@ body{
     color: #2563EB;
     letter-spacing: 1px;
 }
-.shadow-button{
+.shadow-button, .become-instructor{
     transition: 0.2s ease-in-out;
 }
 .shadow-button:hover{
     box-shadow: 0 0 0.5rem white;
+}
+
+.become-instructor:hover{
+    box-shadow: 0 0 0.8rem #8EA6EB;
 }

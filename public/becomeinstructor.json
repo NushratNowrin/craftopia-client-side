@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "title": "Send us your CV",
+        "img": "/becomeInstructor/cv.png"
+    },
+    {
+        "id":2,
+        "title": "Send your Class demo",
+        "img": "/becomeInstructor/classes.png"
+    },
+    {
+        "id":3,
+        "title": "Wait for an interview",
+        "img": "/becomeInstructor/interview.png"
+    }
+]
