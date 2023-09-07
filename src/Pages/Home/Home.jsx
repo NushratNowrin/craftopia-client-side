@@ -1,4 +1,5 @@
 import Banner from "./Banner/Banner";
+import BecomeInstructor from "./BecomeInstructor/BecomeInstructor";
 import Contact from "./Contact/Contact";
 import CountDown from "./CountDownn/CountDown";
 import Faq from "./Faq/Faq";
@@ -14,6 +15,7 @@ const Home = () => {
             <CountDown></CountDown>
             <PopularClass></PopularClass>
             <PopularInstructors></PopularInstructors>
+            <BecomeInstructor></BecomeInstructor>
             <Feedback></Feedback>
             <Faq></Faq>
             <Contact></Contact>
