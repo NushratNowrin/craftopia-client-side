@@ -1,5 +1,6 @@
 import Banner from "./Banner/Banner";
 import Contact from "./Contact/Contact";
+import CountDown from "./CountDownn/CountDown";
 import Faq from "./Faq/Faq";
 import Feedback from "./Feedback/Feedback";
 import PopularClass from "./PopularClass/PopularClass";
@@ -10,6 +11,7 @@ const Home = () => {
     return (
         <div className="pt-24">
             <Banner></Banner>
+            <CountDown></CountDown>
             <PopularClass></PopularClass>
             <PopularInstructors></PopularInstructors>
             <Feedback></Feedback>
