@@ -80,11 +80,11 @@ const SingleClass = ({ classs }) => {
 				<h2 className='pt-2 pb-3 mx-5 border-b border-slate-400 text-2xl text-blue-600'>
 					{name}
 				</h2>
-				<p className='py-2 mx-5 border-b border-slate-400'>{instructor}</p>
-				<p className='py-2 mx-5 border-b border-slate-400'>
+				<p className='py-2 mx-5 border-b border-slate-400 text-slate-900'>{instructor}</p>
+				<p className='py-2 mx-5 border-b border-slate-400 text-slate-900'>
 					Available Seat: {seats}
 				</p>
-				<div className='flex justify-between py-2 mx-5 items-center'>
+				<div className='flex justify-between py-2 mx-5 items-center text-slate-900'>
 					<p>BDT {price}</p>
 					{(classs.seats == 0 || selcted)  ? (
 						<div

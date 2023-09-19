@@ -48,7 +48,7 @@ const Faq = () => {
 						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen1 && (
-						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 ease-in-out transition duration-150'>
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 ease-in-out transition duration-150 text-slate-900'>
 							<p>
 							We provide classes for children, teenagers, and adults. Our programs are designed to accommodate different age groups and skill levels.
 							</p>
@@ -64,7 +64,7 @@ const Faq = () => {
 						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen2 && (
-						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 text-slate-900'>
 							<p>
 							Course durations vary depending on the program. Some are short-term, running for a few weeks, while others are long-term, spanning several months.
 							</p>
@@ -79,7 +79,7 @@ const Faq = () => {
 						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen3 && (
-						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 text-slate-900'>
 							<p>
 							Our instructors are experienced artists and educators with degrees in fine arts or related fields. They bring a wealth of knowledge and expertise to our classes.
 							</p>
@@ -96,7 +96,7 @@ const Faq = () => {
 						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen4 && (
-						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 text-slate-900'>
 							<p>
 							Prerequisites vary depending on the class. Some advanced courses may require prior experience or completion of a prerequisite course. We outline these requirements in our course descriptions.
 							</p>
@@ -113,7 +113,7 @@ const Faq = () => {
 						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen5 && (
-						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 text-slate-900'>
 							<p>
 							Yes, we offer discounts for early registration, sibling enrollment, and occasional scholarship opportunities for deserving students. Please inquire for current discount and scholarship availability.
 							</p>
@@ -130,7 +130,7 @@ const Faq = () => {
 						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen6 && (
-						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 text-slate-900'>
 							<p>
 							Yes, we regularly organize exhibitions and events to showcase our students&apos; work. It&apos;s a great way to celebrate their creativity and talent.
 							</p>

@@ -61,7 +61,7 @@ const CountDown = () => {
 				</div>
 
 				<div className='relative countdown-container flex justify-center items-center'>
-					<div className='absolute top-20 sm:text-xl text-base font-semibold flex sm:flex-row flex-col sm:gap-2 justify-center items-center'>
+					<div className='absolute top-20 sm:text-xl text-base font-semibold flex sm:flex-row flex-col sm:gap-2 justify-center items-center text-slate-900'>
 						<p className=''>CountDown Started!!! </p>
 						<p>Hurry Up!!</p>
 					</div>
