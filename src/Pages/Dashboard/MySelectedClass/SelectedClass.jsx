@@ -9,7 +9,8 @@ const SelectedClass = ({ mySelectedClass }) => {
 			method: "DELETE",
 		})
 			.then((res) => res.json())
-			.then((data) => {
+			.then((data) => 
+			{
 				if (data.deletedCount > 0) {
 					Swal.fire({
 						title: "Are you sure?",
@@ -20,17 +21,17 @@ const SelectedClass = ({ mySelectedClass }) => {
 						cancelButtonColor: "#d33",
 						confirmButtonText: "Yes, delete it!",
 					}).then((result) => {
-                       
-						if (result.isConfirmed) {
+						if(result.isDismissed){
+                            setMySelectedClasses(mySelectedClasses)
+                        }
+						else if (result.isConfirmed) {
 							Swal.fire("Deleted!", "Your file has been deleted.", "success");
 							const remaining = mySelectedClass.filter(
 								(SelectedClass) => SelectedClass._id !== _id
 							);
 							setMySelectedClasses(remaining);
 						}
-                        else{
-                            setMySelectedClasses(mySelectedClass)
-                        }
+                        
 					});
 				}
 			});

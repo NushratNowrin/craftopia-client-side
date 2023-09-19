@@ -4,7 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+    scroll-behavior: smooth;
+    color-scheme: light;
+}
 body{
     font-family: 'Lato', sans-serif;
 }

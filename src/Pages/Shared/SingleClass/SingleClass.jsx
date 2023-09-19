@@ -14,7 +14,7 @@ const SingleClass = ({ classs }) => {
 	const location = useLocation();
 
 	const handleSelectClass = (classs) => {
-		console.log(classs);
+		// console.log(classs);
 		if (user && user.email) {
 			const classItem = {
 				selectedClassID: _id,
@@ -44,8 +44,10 @@ const SingleClass = ({ classs }) => {
 							timer: 1500,
 						});
 					}
+				
 				});
 				setSelcted(true)
+				
 		} else {
 			Swal.fire({
 				title: "Please Login First!",

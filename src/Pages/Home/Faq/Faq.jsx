@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Heading from "../../../components/Heading/Heading";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
 
 const Faq = () => {
 	const [isOpen1, setIsOpen1] = useState(false);
@@ -10,6 +11,7 @@ const Faq = () => {
 	const [isOpen6, setIsOpen6] = useState(false);
 
 	const toggleAccordion1 = () => {
+	
 		setIsOpen1(!isOpen1);
 	};
 	const toggleAccordion2 = () => {
@@ -40,13 +42,13 @@ const Faq = () => {
 				</div>
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8 '
 						onClick={toggleAccordion1}>
 						<h3>What age groups do you cater to?</h3>
-						<span>{isOpen1 ? "-" : "+"}</span>
+						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen1 && (
-						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
+						<div className='text-sm accordion-content bg-blue-200 py-3 px-8 ease-in-out transition duration-150'>
 							<p>
 							We provide classes for children, teenagers, and adults. Our programs are designed to accommodate different age groups and skill levels.
 							</p>
@@ -59,7 +61,7 @@ const Faq = () => {
 						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion2}>
 						<h3>What is the duration of your courses?</h3>
-						<span>{isOpen2 ? "-" : "+"}</span>
+						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen2 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
@@ -74,7 +76,7 @@ const Faq = () => {
 						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion3}>
 						<h3>What qualifications do your instructors have?</h3>
-						<span>{isOpen3 ? "-" : "+"}</span>
+						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen3 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
@@ -91,7 +93,7 @@ const Faq = () => {
 						<h3>
 						Are there any prerequisites for specific classes?
 						</h3>
-						<span>{isOpen4 ? "-" : "+"}</span>
+						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen4 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
@@ -108,7 +110,7 @@ const Faq = () => {
 						<h3>
 						Do you offer any discounts or scholarships?
 						</h3>
-						<span>{isOpen5 ? "-" : "+"}</span>
+						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen5 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
@@ -125,7 +127,7 @@ const Faq = () => {
 						<h3>
 						Are there opportunities for students to showcase their work in exhibitions or events?
 						</h3>
-						<span>{isOpen6 ? "-" : "+"}</span>
+						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
 					</div>
 					{isOpen6 && (
 						<div className='text-sm accordion-content bg-blue-200 py-3 px-8'>
