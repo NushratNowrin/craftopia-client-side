@@ -16,15 +16,14 @@ const Dashboard = () => {
 		<div className='drawer lg:drawer-open'>
 			<input id='my-drawer-2' type='checkbox' className='drawer-toggle' />
 			<div className='drawer-content flex flex-col m-12 '>
-				<Outlet></Outlet>
-
-				<label
+			<label
 					htmlFor='my-drawer-2'
 					className='btn btn-primary drawer-button lg:hidden'>
 					Open drawer
 				</label>
+				<Outlet></Outlet>
 			</div>
-			<div className='drawer-side'>
+			<div className='drawer-side z-50'>
 				<label htmlFor='my-drawer-2' className='drawer-overlay'></label>
 				<ul className='dashboard-menu menu p-4 py-10 w-72 h-full  text-white'>
 					{/* Sidebar content here */}

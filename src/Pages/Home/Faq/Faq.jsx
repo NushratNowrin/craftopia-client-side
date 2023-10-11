@@ -42,7 +42,7 @@ const Faq = () => {
 				</div>
 				<div className='accordion m-2 rounded-lg overflow-hidden font-semibold'>
 					<div
-						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8 '
+						className='accordion-header flex justify-between items-center text-lg bg-blue-600 bg-opacity-70 text-white py-3 px-8'
 						onClick={toggleAccordion1}>
 						<h3>What age groups do you cater to?</h3>
 						<span>{isOpen1 ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}</span>
