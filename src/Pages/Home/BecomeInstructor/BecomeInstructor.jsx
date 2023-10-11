@@ -17,13 +17,12 @@ const BecomeInstructor = () => {
 			</div>
 			<div className='px-10 py-16'>
 				<div className='grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 items-center justify-between sm:gap-10 gap-2'>
-                        {
-                            beinstructor.map(instructor => 
-                                <BeInstructorSingle key={instructor.id} {...instructor} />)
-                        }
 					<div>
 						<img src={instructor} alt='' />
 					</div>
+					{beinstructor.map((instructor) => (
+						<BeInstructorSingle key={instructor.id} {...instructor} />
+					))}
 				</div>
 			</div>
 		</div>

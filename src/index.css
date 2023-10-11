@@ -19,7 +19,7 @@ body{
     color: #2563EB;
     letter-spacing: 1px;
 }
-.shadow-button, .become-instructor{
+.shadow-button, .become-instructor, .instructor-id{
     transition: 0.2s ease-in-out;
 }
 .shadow-button:hover{
@@ -27,5 +27,8 @@ body{
 }
 
 .become-instructor:hover{
-    box-shadow: 0 0 0.8rem #8EA6EB;
+    transform: translateY(5px);
+}
+.become-instructor:hover .instructor-id{
+    top: 6px;
 }
