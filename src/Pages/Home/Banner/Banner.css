@@ -1,5 +1,5 @@
-.awssld__container figure, .awssld__content, .awssld__box{
-    height: 95%;
+.awssld__container figure, .awssld__box{
+    height: 70%;
 }
 .awssld {
     --slider-height-percentage: 45%;
@@ -8,10 +8,13 @@
     top:30%
 }
 .awssld__bullets{
-    bottom: 10px
+    bottom: 80px
 }
 
-@media (max-width: 520px){
+@media (max-width: 1020px){
+    .awssld__container figure, .awssld__box{
+        height: 100%;
+    }
     .awssld__bullets {
         bottom: 0px
     }

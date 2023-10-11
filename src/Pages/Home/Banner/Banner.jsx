@@ -4,7 +4,7 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 import banner1 from "../../../assets/Home/Banner/banner-1.jpg"
-import banner2 from "../../../assets/Home/Banner/banner-2.jpg"
+import banner2 from "../../../assets/Home/Banner/banner-2.png"
 import banner3 from "../../../assets/Home/Banner/banner-3.jpg"
 import banner4 from "../../../assets/Home/Banner/banner-4.jpg"
 import banner5 from "../../../assets/Home/Banner/banner-5.jpg"
@@ -17,7 +17,7 @@ const Banner = () => {
 			<AutoplaySlider
 				play={true}
 				cancelOnInteraction={false} // should stop playing on user interaction
-				interval={6000}>
+				interval={5000}>
 				<div data-src={banner1}>
                     <BannerText heading='Join a Community of Craftopia' text='“Arts and Crafts” is a catchall phrase for creative practices that fall into the category of either art or craft.'></BannerText>
                 </div>

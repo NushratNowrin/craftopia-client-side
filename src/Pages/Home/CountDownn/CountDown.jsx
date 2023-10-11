@@ -48,7 +48,7 @@ const CountDown = () => {
     });
 
 	return (
-		<section className='my-20'>
+		<section className='lg:my-0 my-20'>
 			<div className='flex  items-center justify-center mb-10'>
 				<img src={Offer} alt='' className='sm:w-52 w-40'/>
 

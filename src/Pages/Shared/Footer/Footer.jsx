@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 
 import { FaTwitter, FaFacebookF, FaYoutube } from 'react-icons/fa';
 import ActiveLink from "../Activelink/ActiveLink";
+import "./Footer.css"
 
 const Footer = () => {
     return (
         <footer>
-        <div className='text-white footer p-20 bg-black md:flex justify-between'>
+        <div className='text-white footer p-20 footer-bg md:flex justify-between'>
             <div>
                 <Link to='/'>
                     <img src={logo} className='w-44' alt='' />

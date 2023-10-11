@@ -4,6 +4,7 @@ import { HiDotsVertical, HiX } from 'react-icons/hi';
 import ActiveLink from "../Activelink/ActiveLink";
 import logo from "../../../assets/logo.png"
 import { AuthContext } from "../../../Providers/AuthProvider";
+import './Navbar.css'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
 			});
 	};
     return (
-		<div className='flex bg-gray-950 items-center md:px-20 py-6 px-5 text-white justify-between fixed w-full z-50'>
+		<div className='flex Navbar-bg items-center md:px-20 py-6 px-5 text-white justify-between fixed w-full z-50'>
 			<h3 className='text-sm'>
 				<Link to='/'><img src={logo} className="w-32" alt="" /></Link>
 			</h3>
