@@ -6,11 +6,11 @@ import MySingleClass from './MySingleClass';
 const MyClasses = () => {
     const [courses, setCourses] = useState([]);
     useEffect(() => {
-        fetch("/becomeinstructor.json")
+        fetch("/public/instructorCourses.json")
         .then(res => res.json())
         .then(data => setCourses(data))
     }, []);
-    // console.log(courses)
+    console.log(courses)
     return (
         <div>
             <div className='text-left font-bold text-xl'>

@@ -7,8 +7,7 @@
         "seats": 4,
         "price": 600,
         "students": 11,
-        "status": "Approved",
-        "comment": ""
+        "status": "Approved"
     },
     {
         "_id":"15",
@@ -18,8 +17,7 @@
         "seats": 20,
         "price": 800,
         "students": 0,
-        "status": "Pending",
-        "comment": ""
+        "status": "Pending"
     },
     {
         "_id":"16",
