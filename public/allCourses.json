@@ -1,0 +1,233 @@
+[
+    {
+        "_id":"1",
+        "name":"Painting",
+        "image":"https://m.media-amazon.com/images/I/713jNeMYLFL.jpg",
+        "instructor":"Sharifa Azmeri",
+        "email": "sharifa@gmail.com",
+        "status":"Approved",
+        "seats": 5,
+        "price": 1000,
+        "students": 6
+    },
+    {
+        "_id":"2",
+        "name":"Handicraft",
+        "image":"https://greenfoundationnepal.com/wp-content/uploads/2015/05/RUM06696-1.jpg",
+        "instructor":"Jony Roy",
+        "email": "jony@gmail.com",
+        "status":"Approved",
+        "seats": 3,
+        "price": 500,
+        "students": 5
+    },
+    {
+        "_id":"3",
+        "name":"Sculpture",
+        "image":"https://b4s5x6t6.stackpathcdn.com/wp-content/uploads/2019/11/hb_200178.jpg",
+        "instructor":"Nova Nondi",
+        "email": "nova@gmail.com",
+        "status":"Approved",
+        "seats": 4,
+        "price": 800,
+        "students": 8
+    },
+    {
+        "_id":"4",
+        "name":"Woodworking",
+        "image":"https://www.jackspaint.co.za/images/blog/Woodwork.jpg",
+        "instructor":"Mohiuddin Khan",
+        "email": "mohiuddin@gmail.com",
+        "status":"Approved",
+        "seats": 2,
+        "price": 500,
+        "students": 3
+    },
+    {
+        "_id":"5",
+        "name":"Visual arts",
+        "image":"https://worlduniversityofdesign.ac.in/assets/images/bgs/school-of-visual-arts-banner.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Approved",
+        "seats": 6,
+        "price": 1500,
+        "students": 7
+    },
+    {
+        "_id":"6",
+        "name":"Pottery",
+        "image":"https://t4.ftcdn.net/jpg/01/16/10/63/360_F_116106301_xT6ajFH7FfwB34C44LGSjAjgMZ5D1huo.jpg",
+        "instructor":"Bony Raz",
+        "email": "bony@gmail.com",
+        "status":"Approved",
+        "seats": 2,
+        "price": 700,
+        "students": 4
+    },
+    {
+        "_id":"7",
+        "name":"Fine art",
+        "image":"https://smuct.ac.bd/wp-content/uploads/2020/11/fine-art.jpg",
+        "instructor":"Nizamuddin",
+        "email": "nizam@gmail.com",
+        "status":"Approved",
+        "seats": 3,
+        "price": 900,
+        "students": 9
+    },
+    {
+        "_id":"8",
+        "name":"Textile",
+        "image":"https://cdn.britannica.com/77/103277-050-3E66CBE1/Textiles-market-Tarabuco-Bol.jpg",
+        "instructor":"Nizamuddin",
+        "email": "nizam@gmail.com",
+        "status":"Approved",
+        "seats": 1,
+        "price": 1200,
+        "students": 10
+    },
+    {
+        "_id":"9",
+        "name":"Abstract art",
+        "image":"https://galleryntk.com.au/wp-content/uploads/2017/03/image-8.jpg",
+        "instructor":"Mujibul Islam",
+        "email": "mijib@gmail.com",
+        "status":"Approved",
+        "seats": 0,
+        "price": 800,
+        "students": 20
+    },
+    {
+        "_id":"10",
+        "name":"Ceramics",
+        "image":"https://ehs.umass.edu/sites/default/files/AS%20ceramics.jpg",
+        "instructor":"Misha Shakib",
+        "email": "misha@gmail.com",
+        "status":"Approved",
+        "seats": 3,
+        "price": 500,
+        "students": 10
+    },
+    {
+        "_id":"11",
+        "name":"Drawing",
+        "image":"https://i.ytimg.com/vi/rnOg_e-eCco/maxresdefault.jpg",
+        "instructor":"Nowroz Ahsan",
+        "email": "nowroz@gmail.com",
+        "status":"Approved",
+        "seats": 4,
+        "price": 600,
+        "students": 11
+    },
+    {
+        "_id":"12",
+        "name":"Paper craft",
+        "image":"https://assets-news.housing.com/news/wp-content/uploads/2022/03/03134422/Home-decoration-ideas-with-paper-9-ideas-for-your-mundane-walls.jpg",
+        "instructor":"Mohua Ava",
+        "email": "mohua@gmail.com",
+        "status":"Approved",
+        "seats": 5,
+        "price": 1000,
+        "students": 13
+    },
+    {
+        "_id":"13",
+        "name":"Art Nouveau",
+        "image":"https://www.renaudcreations.fr/wp-content/uploads/2022/04/illustration-mucha-art-nouveau.jpg",
+        "instructor":"Momota moni",
+        "email": "momota@gmail.com",
+        "status":"Approved",
+        "seats": 1,
+        "price": 700,
+        "students": 15
+    },
+    {
+        "_id":"14",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Approved",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    },
+    {
+        "_id":"15",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Pending",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    },
+    {
+        "_id":"16",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Pending",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    },
+    {
+        "_id":"17",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Pending",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    },
+    {
+        "_id":"18",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Pending",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    },
+    {
+        "_id":"19",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Pending",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    },
+    {
+        "_id":"12",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Denied",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    },
+    {
+        "_id":"21",
+        "name":"Crochet",
+        "image":"https://hips.hearstapps.com/hmg-prod/images/forest-amigurumi-vincent-green-hithe-1666772951.jpg",
+        "instructor":"Nusaiba Hawa",
+        "email": "nusaiba@gmail.com",
+        "status":"Denied",
+        "seats": 3,
+        "price": 900,
+        "students": 18
+    }
+]
