@@ -18,13 +18,16 @@ const Dashboard = () => {
 			.then((data) => setInstructors(data));
 	}, []);
 
-    const userEmail = user.email;
+    const userEmail = user?.email;
+	console.log(userEmail)
 
 	// conditional
-    const instructorEmail = instructors.map(instructor => instructor.email);
-    const adminEmail = 'admin@gmail.com'
+    const findInstructor = instructors.find(instructor => instructor.email === userEmail);
+	const instructorEmail = findInstructor?.email;
+	// console.log(instructorEmail);
+    const adminEmail = 'admin@gmail.com';
+	// console.log(adminEmail)
 	const studentEmail = (userEmail!= (instructorEmail || adminEmail))
-	
 	// console.log(studentEmail)
 
 	const studentLinks = 
@@ -113,7 +116,7 @@ const Dashboard = () => {
 					{/* Dashboard Links */}
 					{studentEmail == true && studentLinks}
 					{userEmail == instructorEmail && instructorLinks}
-					{userEmail == adminEmail && adminLinks}
+					{userEmail === adminEmail && adminLinks}
 
 					<div className='border-b border-zinc-500 my-5'></div>
 
