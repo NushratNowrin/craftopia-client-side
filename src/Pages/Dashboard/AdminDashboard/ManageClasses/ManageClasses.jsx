@@ -10,7 +10,7 @@ const ManageClasses = () => {
 	}, []);
     return (
         <div>
-            <div className='text-left font-bold text-xl'>
+            <div className='text-left font-bold text-xl mb-10'>
             Manage Classes
             </div>
             {courses.map((course) => (

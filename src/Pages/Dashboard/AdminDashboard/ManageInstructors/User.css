@@ -1,7 +1,8 @@
 td{
-    padding: 16px 20px;
+    padding: 16px;
     width: 200px;
     text-align: center;
+    vertical-align: middle;
 }
 tr,th{
     padding: 20px 0;
