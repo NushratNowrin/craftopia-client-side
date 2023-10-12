@@ -42,7 +42,7 @@ const MySingleClass = ({ course }) => {
 						</button>
 						{course.comment ? (
 							<button className='relative text-sm font-semibold px-4 py-2 border bg-blue-600 text-white  rounded-xl tracking-wider hover:-translate-y-1 hover:scale-100 hover:bg-blue-800 duration-300 flex items-center gap-1' onClick={toggleOpenComment}>
-								Comment
+								Feedback
 							</button>
 						) : (
 							""

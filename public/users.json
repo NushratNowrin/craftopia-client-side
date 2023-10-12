@@ -1,0 +1,125 @@
+[
+    {
+        "_id":"1",
+        "name":"Jony Roy",
+        "email":"jony@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"2",
+        "name":"Bony Raz",
+        "email":"bony@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"3",
+        "name": "Shahadat Hossain Nayon",
+        "email":"nayon@gmail.com",
+        "role": "user"
+        
+    },
+    {
+        "_id":"4",
+        "name": "Farida Parvin Anne",
+        "email":"farida@gmail.com",
+        "role": "user"
+    },
+    {
+        "_id":"5",
+        "name":"Momota moni",
+        "email":"momota@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"6",
+        "name":"Misha Shakib",
+        "email":"misha@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"7",
+        "name":"Nowroz Ahsan",
+        "email":"nowroz@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"8",
+        "name": "Nasif Imtiaz",
+        "email":"nasif@gmail.com",
+        "role": "user"
+       
+    },
+    {
+        "_id":"9",
+        "name":"Mohua Ava",
+        "email":"ava@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"10",
+        "name":"Nova Nondi",
+        "name": "Hasibul Hasan",
+        "email":"hasibul@gmail.com",
+        "role": "user"
+        
+    },
+    {
+        "_id":"11",
+        "name":"Nusaiba Hawa",
+        "email":"hawa@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"12",
+        "name":"Nizamuddin",
+        "email":"nizam@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"13",
+        "name": "Hasan Ali",
+        "email":"hasanali@gmail.com",
+        "role": "user"
+    },
+    {
+        "_id":"14",
+        "email":"nova@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"15",
+        "name": "Nushrat Jahan",
+        "email":"nushrat@gmail.com",
+        "role": "user"
+    },
+    {
+        "_id":"16",
+        "name": "Nowrin Neha",
+        "email":"nowrin@gmail.com",
+        "role": "user"
+    },
+    {
+        "_id":"17",
+        "name":"Mujibul Islam",
+        "email":"mujibul@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"18",
+        "name":"Mohiuddin Khan",
+        "email":"mohiuddin@gmail.com",
+        "role": "instructor"
+    },
+    {
+        "_id":"19",
+        "name": "Abu Sahad",
+        "email":"abusadad@gmail.com",
+        "role": "user"
+    },
+    {
+        "_id":"20",
+        "name":"Sharifa Azmeri",
+        "email":"sharifa@gmail.com",
+        "role": "instructor"
+    }
+]

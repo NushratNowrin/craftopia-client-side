@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
 
 const ManageInstructors = () => {
-    return (
-        <div>
-            Manage Users
-        </div>
-    );
+	return (
+		<div>
+			<div className='text-left font-bold text-xl'>Manage Users</div>
+            <div>
+                <tr>
+                    
+                </tr>
+            </div>
+		</div>
+	);
 };
 
 export default ManageInstructors;
