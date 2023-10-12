@@ -19,7 +19,7 @@ const Dashboard = () => {
 	}, []);
 
     const userEmail = user?.email;
-	console.log(userEmail)
+	// console.log(userEmail)
 
 	// conditional
     const findInstructor = instructors.find(instructor => instructor.email === userEmail);
@@ -114,8 +114,8 @@ const Dashboard = () => {
 					</div>
 
 					{/* Dashboard Links */}
-					{studentEmail == true && studentLinks}
-					{userEmail == instructorEmail && instructorLinks}
+					{studentEmail === true && studentLinks}
+					{userEmail === instructorEmail && instructorLinks}
 					{userEmail === adminEmail && adminLinks}
 
 					<div className='border-b border-zinc-500 my-5'></div>

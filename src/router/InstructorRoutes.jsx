@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
-const StudentsRoutes = ({ children }) => {
+const InstructorRoutes = ({children}) => {
     const { user } = useContext(AuthContext);
     const [instructors, setInstructors] = useState([]);
 	useEffect(() => {
@@ -13,6 +13,7 @@ const StudentsRoutes = ({ children }) => {
 			.then((res) => res.json())
 			.then((data) => setInstructors(data));
 	}, []);
+
     const userEmail = user?.email;
     console.log(userEmail)
 
@@ -25,11 +26,10 @@ const StudentsRoutes = ({ children }) => {
 	const studentEmail = (userEmail!= (instructorEmail || adminEmail))
 	// console.log(studentEmail)
 
-    if ( userEmail!= studentEmail) {
+    if ( userEmail === instructorEmail) {
         return children;
     }
 
-    return <Navigate to='/login'></Navigate>
 };
 
-export default StudentsRoutes;
+export default InstructorRoutes;

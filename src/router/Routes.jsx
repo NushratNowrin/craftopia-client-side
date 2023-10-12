@@ -7,12 +7,14 @@ import Login from "../Pages/Login/Login";
 import Error from "../Pages/Error/Error";
 import Register from "../Pages/Registration/Register";
 import Dashboard from "../Layout/Main/Dashboard";
-import MyClasses from "../Pages/Dashboard/StudentDashboard/MyClasses/MyClasses";
 import MySelectedClass from "../Pages/Dashboard/StudentDashboard/MySelectedClass/MySelectedClass";
 import MyEnrolledClass from "../Pages/Dashboard/StudentDashboard/MyEnrolledClass/MyEnrolledClass";
 import DashboardIntro from "../Pages/Dashboard/DashboardIntro";
 import PaymentHistory from "../Pages/Dashboard/StudentDashboard/PaymentHistory/PaymentHistory";
 import StudentsRoutes from "./StudentsRoutes";
+import InstructorRoutes from "./InstructorRoutes";
+import AddClass from "../Pages/Dashboard/InstructorsDashboard/AddClass/AddClass";
+import MyClasses from "../Pages/Dashboard/InstructorsDashboard/MyClasses/MyClasses";
 
 export const router = createBrowserRouter([
 	{
@@ -65,35 +67,43 @@ export const router = createBrowserRouter([
 			// },
 
 			// instructor routes
-			// {
-			//     path: 'add-class',
-			//     element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
-			// },
-			// {
-			//     path: 'my-classes',
-			//     element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
-			// },
-			// {
-			//     path: 'my-classes/update/:id',
-			//     element: <InstructorRoute><MyClassUpdate></MyClassUpdate></InstructorRoute>
-			// },
+			{
+				path: "add-class",
+				element: (
+					<InstructorRoutes><AddClass></AddClass></InstructorRoutes>
+				),
+			},
+			{
+				path: "my-classes",
+				element: (
+					<InstructorRoutes><MyClasses></MyClasses></InstructorRoutes>
+				),
+			},
 
 			// student routes
 			{
-				path: "dashboard",
-				element: <StudentsRoutes><MyClasses></MyClasses></StudentsRoutes>,
-			},
-			{
 				path: "my-selected-class",
-				element: <StudentsRoutes><MySelectedClass></MySelectedClass></StudentsRoutes>,
+				element: (
+					<StudentsRoutes>
+						<MySelectedClass></MySelectedClass>
+					</StudentsRoutes>
+				),
 			},
 			{
 				path: "my-enrolled-class",
-				element: <StudentsRoutes><MyEnrolledClass></MyEnrolledClass></StudentsRoutes>,
+				element: (
+					<StudentsRoutes>
+						<MyEnrolledClass></MyEnrolledClass>
+					</StudentsRoutes>
+				),
 			},
 			{
 				path: "payment-history",
-				element: <StudentsRoutes><PaymentHistory></PaymentHistory></StudentsRoutes>,
+				element: (
+					<StudentsRoutes>
+						<PaymentHistory></PaymentHistory>
+					</StudentsRoutes>
+				),
 			},
 		],
 	},
