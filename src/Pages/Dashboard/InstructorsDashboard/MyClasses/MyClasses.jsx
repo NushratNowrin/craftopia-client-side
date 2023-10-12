@@ -10,7 +10,7 @@ const MyClasses = () => {
         .then(res => res.json())
         .then(data => setCourses(data))
     }, []);
-    console.log(courses)
+    // console.log(courses)
     return (
         <div>
             <div className='text-left font-bold text-xl'>

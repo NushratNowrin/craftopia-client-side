@@ -1,0 +1,12 @@
+td{
+    padding: 16px 20px;
+    width: 200px;
+    text-align: center;
+}
+tr,th{
+    padding: 20px 0;
+    width: 100%;
+}
+tr:nth-child(2n){
+    background-color: antiquewhite;
+}
