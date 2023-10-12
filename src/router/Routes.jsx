@@ -7,12 +7,12 @@ import Login from "../Pages/Login/Login";
 import Error from "../Pages/Error/Error";
 import Register from "../Pages/Registration/Register";
 import Dashboard from "../Layout/Main/Dashboard";
-import MyClasses from "../Pages/Dashboard/MyClasses/MyClasses";
-import MySelectedClass from "../Pages/Dashboard/MySelectedClass/MySelectedClass";
-import MyEnrolledClass from "../Pages/Dashboard/MyEnrolledClass/MyEnrolledClass";
+import MyClasses from "../Pages/Dashboard/StudentDashboard/MyClasses/MyClasses";
+import MySelectedClass from "../Pages/Dashboard/StudentDashboard/MySelectedClass/MySelectedClass";
+import MyEnrolledClass from "../Pages/Dashboard/StudentDashboard/MyEnrolledClass/MyEnrolledClass";
 import DashboardIntro from "../Pages/Dashboard/DashboardIntro";
-import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
-
+import PaymentHistory from "../Pages/Dashboard/StudentDashboard/PaymentHistory/PaymentHistory";
+import StudentsRoutes from "./StudentsRoutes";
 
 export const router = createBrowserRouter([
 	{
@@ -35,11 +35,11 @@ export const router = createBrowserRouter([
 	},
 	{
 		path: "/login",
-		element: <Login></Login>
+		element: <Login></Login>,
 	},
 	{
 		path: "/register",
-		element: <Register></Register>
+		element: <Register></Register>,
 	},
 	{
 		path: "*",
@@ -50,26 +50,51 @@ export const router = createBrowserRouter([
 		element: <Dashboard></Dashboard>,
 		children: [
 			{
-				path: "dashboard",
-				element: <MyClasses></MyClasses>
+				path: "",
+				element: <DashboardIntro></DashboardIntro>,
 			},
+
+			// admin routes
+			//  {
+			//     path: 'manage-classes',
+			//     element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
+			// },
+			// {
+			//     path: 'manage-users',
+			//     element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
+			// },
+
+			// instructor routes
+			// {
+			//     path: 'add-class',
+			//     element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+			// },
+			// {
+			//     path: 'my-classes',
+			//     element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
+			// },
+			// {
+			//     path: 'my-classes/update/:id',
+			//     element: <InstructorRoute><MyClassUpdate></MyClassUpdate></InstructorRoute>
+			// },
+
+			// student routes
 			{
-				path: "dashboard-intro",
-				element: <DashboardIntro></DashboardIntro>
+				path: "dashboard",
+				element: <StudentsRoutes><MyClasses></MyClasses></StudentsRoutes>,
 			},
 			{
 				path: "my-selected-class",
-				element: <MySelectedClass></MySelectedClass>,
+				element: <StudentsRoutes><MySelectedClass></MySelectedClass></StudentsRoutes>,
 			},
 			{
 				path: "my-enrolled-class",
-				element: <MyEnrolledClass></MyEnrolledClass>
+				element: <StudentsRoutes><MyEnrolledClass></MyEnrolledClass></StudentsRoutes>,
 			},
 			{
 				path: "payment-history",
-				element: <PaymentHistory></PaymentHistory>
-			}
-		]
-	}
-
+				element: <StudentsRoutes><PaymentHistory></PaymentHistory></StudentsRoutes>,
+			},
+		],
+	},
 ]);
