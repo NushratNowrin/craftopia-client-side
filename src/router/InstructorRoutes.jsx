@@ -15,7 +15,7 @@ const InstructorRoutes = ({children}) => {
 	}, []);
 
     const userEmail = user?.email;
-    console.log(userEmail)
+    // console.log(userEmail)
 
 	// conditional
     const findInstructor = instructors.find(instructor => instructor.email === userEmail);

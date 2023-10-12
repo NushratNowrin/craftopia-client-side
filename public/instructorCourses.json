@@ -1,0 +1,35 @@
+[
+    {
+        "_id":"11",
+        "name":"Nature Drawing",
+        "image":"https://i.ytimg.com/vi/rnOg_e-eCco/maxresdefault.jpg",
+        "instructor":"Nowroz Ahsan",
+        "seats": 4,
+        "price": 600,
+        "students": 11,
+        "status": "Approved",
+        "comment": ""
+    },
+    {
+        "_id":"15",
+        "name":"Oil Painting",
+        "image":"https://www.florenceartacademy.it/slir/w1000-c1000:664/img_slir//florenceartacademy/8/1/811524819039.jpg",
+        "instructor":"Nowroz Ahsan",
+        "seats": 20,
+        "price": 800,
+        "students": 0,
+        "status": "Pending",
+        "comment": ""
+    },
+    {
+        "_id":"16",
+        "name":"Face Drawing",
+        "image":"https://img-c.udemycdn.com/course/750x422/137230_76b8_2.jpg",
+        "instructor":"Nowroz Ahsan",
+        "seats": 20,
+        "price": 800,
+        "students": 0,
+        "status": "Declined",
+        "comment":"You should reduce the course price and imrove the video quality. Thank you."
+    }
+]
