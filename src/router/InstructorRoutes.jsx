@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
 
 const InstructorRoutes = ({children}) => {
     const { user } = useContext(AuthContext);

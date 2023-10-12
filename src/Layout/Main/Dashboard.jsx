@@ -71,8 +71,8 @@ const Dashboard = () => {
 				</ActiveLink>
 			</li>
 			<li className='mx-5 font-semibold '>
-				<ActiveLink className='hover:text-yellow-500' to='manage-instructors'>
-				Manage Instructors
+				<ActiveLink className='hover:text-yellow-500' to='manage-users'>
+				Manage Users
 				</ActiveLink>
 			</li>
 		</>
