@@ -7,7 +7,7 @@ const MyEnrolledClass = () => {
     const [myEnrolledClasses, setMyEnrolledClasses] = useState([]);
     useEffect(()=>{
         fetch(
-            "http://localhost:5000/enrolledClasses"
+            "https://craftopia-server-side.vercel.app/enrolledClasses"
         )
         .then(res => res.json())
         .then(data => setMyEnrolledClasses(data))
